@@ -1,0 +1,56 @@
+.mainNav {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    font-size: 21px;
+    background: linear-gradient(to top, transparent, black);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.navItem {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: 5px;
+}
+
+.logo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0 20px;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.innerNavItem {
+    margin: 0 10px;
+    text-transform: capitalize;
+    color: white;
+    margin: 0 10px;
+
+}
+
+.contact {
+    border-radius: 50px;
+    color: blue;
+    background: white;
+    transition: color .5s, background-color .5s;
+    padding: 5px 20px;
+}
+.contact:hover{
+    color: white;
+    transition: .5s;
+    background-color: black;
+
+}
