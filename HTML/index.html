@@ -26,21 +26,67 @@
         <div id="mainBanner" role="banner">
             <div class="bannerItem slider" role="slider">
                 <p>
-                    <h1>your vision is our mission</h1>
-                    <h2>let's build something great</h2>
-                    <h1>together</h1><br><br>
-                    <h3> ---- for the people, by the people, of the people</h3>
+                <h1>your vision is our mission</h1>
+                <h2>let's build something great</h2>
+                <h1>together</h1><br><br>
+                <h3> ---- for the industries, by the best engineers</h3>
                 </p>
+            </div>
+            <div class="bannerItem slider" role="slider">
+                <h1>DELIVERING VALUE THROUGH DIGITAL ENGINEERING</h1>
             </div>
             <div class="bannerItem slider" role="slider"></div>
             <div class="bannerItem slider" role="slider"></div>
-            <div class="bannerItem slider" role="slider"></div>
+        </div>
+        <div id="workDemo" role="article">
+            <h1 role="heading">Modern Problems <br>Needs Modern <br>Solution <br>
+                <hr>
+            </h1>
+            <div class="sample1 sample" role="doc-chapter">
+                <div class="text">
+                    <h1>QR Code Security</h1>
+                    <h2>simple, secure, fast authentication system</h2>
+                    <p>everyone use the qrcode, but nobody knows how much potential it has, so we build some security
+                        software using our own infrastructure, to make it more secure</p><br><br><br>
+                    <a href="security" class="button">know more</a>
+                </div>
+                <div class="pic sample1pic"></div>
+            </div>
+            <div class="sample2 sample">
+                <div class="pic sample2pic"></div>
+                <div class="text">
+                    <h1>QR Code Generator</h1>
+                    <h2>generate, distribute, in House QR Code, API</h2>
+                    <p>one of our most useful project, and the backend of the QR code Security system, and the backbone of the payment interface</p><br><br><br>
+                    <a href="qrcode" class="button">know more</a>
+                </div>
+            </div>
+            <div class="sample3 sample">
+                <div class="text">
+                    <h1>UPI Payment API</h1>
+                    <h2>fast, secure, instant payment,Everyday log</h2>
+                    <p>Simple, easy to use, affordable, more then 85% UP Time, in house server, your data in your hand, developer friendly</p><br><br><br>
+                    <a href="payment" class="button">know more</a>
+                </div>
+                <div class="pic sample3pic"></div>
+            </div>
+            <div class="sample4 sample">
+                <div class="pic sample4pic"></div>
+                <div class="text">
+                    <h1>Hosting</h1>
+                    <h2>Linux VPS, Easy to deploy, affordable, git, </h2>
+                    <p>
+                        <b>Complementary Free Domain</b>, Easy to use interface, easy to manage, build in version control, supports whatever language you comfortable in & whatever database you want, upto 85% UP Time, <b>Best For Students</b>
+                    </p><br><br><br>
+                    <a href="hosting" class="button">know more</a>
+                </div>
+            </div>
         </div>
 
     </main>
 </body>
 <script useFor="append the CSS files in the Head tag as the Link && add the favicon">
-    const cssList = ["root", "nav","banner"];
+    const cssList = ["root", "nav", "banner", "workDemo"];
 
     for (const item of cssList) {
         const link = document.createElement("link");
@@ -59,5 +105,15 @@
 
 </script>
 <script src="JS/banner.js"></script>
+<script useFor = "attach the backgroundImage in the sample DIV">
+    let sample1 = document.getElementsByClassName("sample1pic")[0];
+    let sample2 = document.getElementsByClassName("sample2pic")[0];
+    let sample3 = document.getElementsByClassName("sample3pic")[0];
+    let sample4 = document.getElementsByClassName("sample4pic")[0];
+    sample1.style.backgroundImage = "url('Assets/EXTRA/workDemo/sample1.jpg')";
+    sample2.style.backgroundImage = "url('Assets/EXTRA/workDemo/sample2.jpg')";
+    sample3.style.backgroundImage = "url('Assets/EXTRA/workDemo/sample3.jpg')";
+    sample4.style.backgroundImage = "url('Assets/EXTRA/workDemo/sample4.jpg')";
+</script>
 
 </html>
