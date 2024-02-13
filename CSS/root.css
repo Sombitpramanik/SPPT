@@ -6,11 +6,14 @@
 }
 
 body {
-    height: 150vh;
+    height: 300vh;
 }
 a{
     text-decoration: none;
     color:black;
+}
+.icon{
+    filter: invert(100%);
 }
 ::-webkit-scrollbar {
     width: 8px;

@@ -24,13 +24,23 @@
     </header>
     <main role="article">
         <div id="mainBanner" role="banner">
-
+            <div class="bannerItem slider" role="slider">
+                <p>
+                    <h1>your vision is our mission</h1>
+                    <h2>let's build something great</h2>
+                    <h1>together</h1><br><br>
+                    <h3> ---- for the people, by the people, of the people</h3>
+                </p>
+            </div>
+            <div class="bannerItem slider" role="slider"></div>
+            <div class="bannerItem slider" role="slider"></div>
+            <div class="bannerItem slider" role="slider"></div>
         </div>
 
     </main>
 </body>
 <script useFor="append the CSS files in the Head tag as the Link && add the favicon">
-    const cssList = ["root", "nav"];
+    const cssList = ["root", "nav","banner"];
 
     for (const item of cssList) {
         const link = document.createElement("link");
@@ -48,5 +58,6 @@
     document.head.appendChild(icon);
 
 </script>
+<script src="JS/banner.js"></script>
 
 </html>

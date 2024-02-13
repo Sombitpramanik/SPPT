@@ -1,0 +1,25 @@
+#mainBanner {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bannerItem {
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.bannerItem.active {
+    opacity: 1;
+}
+.slider{
+    color: white;
+    padding: 12vh 10vw;
+    text-transform: capitalize;
+
+}
