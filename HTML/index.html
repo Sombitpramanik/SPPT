@@ -5,9 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPP Technologies</title>
+    <style>
+        .alertDiv {
+            text-transform: capitalize;
+            font-size: 18px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            backdrop-filter: blur(10px);
+            /* Apply blur effect to the backdrop */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure the alert is on top of everything */
+        }
+
+        .alertContent {
+            text-align: center;
+            width: 60vw;
+            height: 60vh;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #okButton {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 50%;
+            transform: translate(-50%);
+        }
+
+        #okButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="alertDiv" class="alertDiv" role="alert">
+        <div class="alertContent">
+            <p>This website is in development.</p>
+            <p>This version is just a UI prototype. All buttons and hyperlinks are disabled.</p>
+            <p>If you clicked on anything you might see the 404 page</p>
+            <p>Thankyou for showing your interest in this domain</p>
+            <p>This domain is belongs to : <b><i>SPP Technologies</i></b> </p>
+            <p>Proprietorship by <b><i>Sombit Pramanik</i></b></p>
+            <button id="okButton">OK</button>
+        </div>
+    </div>
+
     <header role="navigation">
         <nav class="mainNav" role="menubar">
             <div class="logo navItem" role="menuitem">
@@ -57,7 +114,8 @@
                 <div class="text">
                     <h1>QR Code Generator</h1>
                     <h2>generate, distribute, in House QR Code, API</h2>
-                    <p>one of our most useful project, and the backend of the QR code Security system, and the backbone of the payment interface</p><br><br><br>
+                    <p>one of our most useful project, and the backend of the QR code Security system, and the backbone
+                        of the payment interface</p><br><br><br>
                     <a href="qrcode" class="button">know more</a>
                 </div>
             </div>
@@ -65,7 +123,8 @@
                 <div class="text">
                     <h1>UPI Payment API</h1>
                     <h2>fast, secure, instant payment,Everyday log</h2>
-                    <p>Simple, easy to use, affordable, more then 85% UP Time, in house server, your data in your hand, developer friendly</p><br><br><br>
+                    <p>Simple, easy to use, affordable, more then 85% UP Time, in house server, your data in your hand,
+                        developer friendly</p><br><br><br>
                     <a href="payment" class="button">know more</a>
                 </div>
                 <div class="pic sample3pic"></div>
@@ -76,7 +135,9 @@
                     <h1>Hosting</h1>
                     <h2>Linux VPS, Easy to deploy, affordable, git, </h2>
                     <p>
-                        <b>Complementary Free Domain</b>, Easy to use interface, easy to manage, build in version control, supports whatever language you comfortable in & whatever database you want, upto 85% UP Time, <b>Best For Students</b>
+                        <b>Complementary Free Domain</b>, Easy to use interface, easy to manage, build in version
+                        control, supports whatever language you comfortable in & whatever database you want, upto 85% UP
+                        Time, <b>Best For Students</b>
                     </p><br><br><br>
                     <a href="hosting" class="button">know more</a>
                 </div>
@@ -117,11 +178,15 @@
                 </ul>
             </div>
         </div>
-       <i><div class="copy"><h1>Copyright 2023 - 2024 SPP Technologies. All Rights Reserved</h1></div></i>
+        <i>
+            <div class="copy">
+                <h1>Copyright 2023 - 2024 SPP Technologies. All Rights Reserved</h1>
+            </div>
+        </i>
     </footer>
 </body>
 <script useFor="append the CSS files in the Head tag as the Link && add the favicon">
-    const cssList = ["root", "nav", "banner", "workDemo","secondBanner","footer"];
+    const cssList = ["root", "nav", "banner", "workDemo", "secondBanner", "footer"];
 
     for (const item of cssList) {
         const link = document.createElement("link");
@@ -139,8 +204,8 @@
     document.head.appendChild(icon);
 
 </script>
-<script useFor = "The Banner auto movement" src="JS/banner.js"></script>
-<script useFor = "attach the backgroundImage in the sample DIV">
+<script useFor="The Banner auto movement" src="JS/banner.js"></script>
+<script useFor="attach the backgroundImage in the sample DIV">
     let sample1 = document.getElementsByClassName("sample1pic")[0];
     let sample2 = document.getElementsByClassName("sample2pic")[0];
     let sample3 = document.getElementsByClassName("sample3pic")[0];
@@ -149,6 +214,18 @@
     sample2.style.backgroundImage = "url('Assets/EXTRA/workDemo/sample2.jpg')";
     sample3.style.backgroundImage = "url('Assets/EXTRA/workDemo/sample3.jpg')";
     sample4.style.backgroundImage = "url('Assets/EXTRA/workDemo/sample4.jpg')";
+</script>
+<script useFor="showing the alert">
+    // Get the alert div and OK button
+    const alertDiv = document.getElementById('alertDiv');
+    const okButton = document.getElementById('okButton');
+
+    // Add click event listener to the OK button
+    okButton.addEventListener('click', function () {
+        // Hide the alert div when OK button is clicked
+        alertDiv.style.display = 'none';
+    });
+
 </script>
 
 </html>
