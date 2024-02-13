@@ -89,12 +89,39 @@
             <div class="bannerItem2"></div>
         </div>
     </main>
-    <footer>
-        
+    <footer role="contentinfo">
+        <div class="ft">
+            <div class="colum">
+                <h1>Services</h1>
+                <ul class="orderdList">
+                    <li>Digital Engineering</li>
+                    <li>Custom software</li>
+                    <li>Web Development</li>
+                    <li>Linux Hosting & Admin</li>
+                </ul>
+            </div>
+            <div class="colum">
+                <h1>Solutions</h1>
+                <ul class="orderdList">
+                    <li>The QR Code Generator</li>
+                    <li>Payment API</li>
+                    <li>Web Hosting</li>
+                    <li>QR Authenticator</li>
+                </ul>
+            </div>
+            <div class="colum">
+                <h1>Explore</h1>
+                <ul class="orderdList">
+                    <li>Blog's</li>
+                    <li>News</li>
+                </ul>
+            </div>
+        </div>
+       <i><div class="copy"><h1>Copyright 2023 - 2024 SPP Technologies. All Rights Reserved</h1></div></i>
     </footer>
 </body>
 <script useFor="append the CSS files in the Head tag as the Link && add the favicon">
-    const cssList = ["root", "nav", "banner", "workDemo","secondBanner"];
+    const cssList = ["root", "nav", "banner", "workDemo","secondBanner","footer"];
 
     for (const item of cssList) {
         const link = document.createElement("link");

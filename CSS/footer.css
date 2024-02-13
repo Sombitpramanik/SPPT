@@ -1,0 +1,42 @@
+footer{
+    margin-top: 10px;
+    height: 350px;
+    background-color: rgb(31, 31, 118);
+}
+.ft{
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+.colum{
+    color: white;
+    /* border: 1px solid red; */
+    width: 30%;
+    align-self: top;
+    text-align: left;
+    padding: 10px;
+}
+.orderdList{    
+    margin: 40px 50%;
+    list-style-type: square;
+    position: relative;
+    list-style-position: inside;
+    width: max-content;
+    transform: translate(-50%);
+}
+footer h1{
+    font-size: 16px;
+    text-align: center;
+}
+li{
+    margin: 20px 0;
+    cursor: pointer;
+}
+.copy{
+    color: black;
+    position: absolute;
+    bottom: 1;
+    margin: 0 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
