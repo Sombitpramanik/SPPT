@@ -82,11 +82,19 @@
                 </div>
             </div>
         </div>
-
+        <div id="secondBanner" role="banner">
+            <div class="bannerItem2"></div>
+            <div class="bannerItem2"></div>
+            <div class="bannerItem2"></div>
+            <div class="bannerItem2"></div>
+        </div>
     </main>
+    <footer>
+        
+    </footer>
 </body>
 <script useFor="append the CSS files in the Head tag as the Link && add the favicon">
-    const cssList = ["root", "nav", "banner", "workDemo"];
+    const cssList = ["root", "nav", "banner", "workDemo","secondBanner"];
 
     for (const item of cssList) {
         const link = document.createElement("link");
@@ -104,7 +112,7 @@
     document.head.appendChild(icon);
 
 </script>
-<script src="JS/banner.js"></script>
+<script useFor = "The Banner auto movement" src="JS/banner.js"></script>
 <script useFor = "attach the backgroundImage in the sample DIV">
     let sample1 = document.getElementsByClassName("sample1pic")[0];
     let sample2 = document.getElementsByClassName("sample2pic")[0];

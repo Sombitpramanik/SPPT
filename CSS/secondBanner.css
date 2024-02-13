@@ -1,0 +1,19 @@
+#secondBanner {
+    border: 2px solid red;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.bannerItem2.active {
+    opacity: 1;
+}
+
+.bannerItem2 {
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
