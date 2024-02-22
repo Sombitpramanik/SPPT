@@ -5,20 +5,21 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    height: 300vh;
-}
-a{
+a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
-h1,h2{
+
+h1,
+h2 {
     text-transform: capitalize;
 }
-.icon{
+
+.icon {
     filter: invert(100%);
 }
-.button{
+
+.button {
     padding: 10px 20px;
     position: relative;
     border-radius: 10px;
@@ -28,8 +29,14 @@ h1,h2{
     font-size: 18px;
     font-weight: 600;
 }
+
 ::-webkit-scrollbar {
     width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {

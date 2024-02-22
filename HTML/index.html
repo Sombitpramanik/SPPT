@@ -65,20 +65,7 @@
         </div>
     </div>
 
-    <header role="navigation">
-        <nav class="mainNav" role="menubar">
-            <div class="logo navItem" role="menuitem">
-                <a href="/SPPT/"><img class="icon" width="50" height="50" src="Assets/LOGO/logo.png" alt="Logo"></a>
-                <a href="/SPPT/" class="innerNavItem">SPP Technologies</a>
-            </div>
-            <div class="navLinks navItem" role="menuitem">
-                <a href="Services" class="innerNavItem" role="menuitem">services</a>
-                <a href="Solutions" class="innerNavItem" role="menuitem">solutions</a>
-                <a href="Explore" class="innerNavItem" role="menuitem">explore</a>
-                <a href="Contact" class="innerNavItem contact" role="menuitem">contact</a>
-            </div>
-        </nav>
-    </header>
+    <?php include_once "HTML/component/header.html"; ?>
     <main role="article">
         <div id="mainBanner" role="banner">
             <div class="bannerItem slider" role="slider">
@@ -150,40 +137,7 @@
             <div class="bannerItem2"></div>
         </div>
     </main>
-    <footer role="contentinfo">
-        <div class="ft">
-            <div class="colum">
-                <h1>Services</h1>
-                <ul class="orderdList">
-                    <li>Digital Engineering</li>
-                    <li>Custom software</li>
-                    <li>Web Development</li>
-                    <li>Linux Hosting & Admin</li>
-                </ul>
-            </div>
-            <div class="colum">
-                <h1>Solutions</h1>
-                <ul class="orderdList">
-                    <li>The QR Code Generator</li>
-                    <li>Payment API</li>
-                    <li>Web Hosting</li>
-                    <li>QR Authenticator</li>
-                </ul>
-            </div>
-            <div class="colum">
-                <h1>Explore</h1>
-                <ul class="orderdList">
-                    <li>Blog's</li>
-                    <li>News</li>
-                </ul>
-            </div>
-        </div>
-        <i>
-            <div class="copy">
-                <h1>Copyright 2023 - 2024 SPP Technologies. All Rights Reserved</h1>
-            </div>
-        </i>
-    </footer>
+    <?php include_once "HTML/component/footer.html";?>
 </body>
 <script useFor="append the CSS files in the Head tag as the Link && add the favicon">
     const cssList = ["root", "nav", "banner", "workDemo", "secondBanner", "footer"];
