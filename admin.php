@@ -4,7 +4,16 @@ global $output;
 
 if (isset($_POST["command"])) {
     if ($command != null) {
-        $output = shell_exec($command);
+        // Write the command to a Python script
+        $pythonScript = fopen("executer.py", "w");
+        fwrite($pythonScript, "import subprocess\n");
+        fwrite($pythonScript, "output = subprocess.getoutput('$command')\n");
+        fwrite($pythonScript, "print(output)");
+        fclose($pythonScript);
+
+        // Execute the Python script and capture the output
+        $output = shell_exec("python3 executer.py");
+
         echo $output;
     }
 }
