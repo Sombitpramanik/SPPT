@@ -1,9 +1,10 @@
 <?php
-global $command;
-global $output;
-
 if (isset($_POST["command"])) {
+    $command = $_POST["command"];
+    echo "button presed";
     if ($command != null) {
+        echo "value not null";
+        echo $command;
         // Write the command to a Python script
         // $pythonScript = fopen("executer.py", "w");
         // fwrite($pythonScript, "import subprocess\n");
@@ -39,16 +40,36 @@ if (isset($_POST["command"])) {
             <form id="commandForm">
                 <label for="command">Enter Command:</label>
                 <input type="text" id="command" name="command">
-                <button type="submit">Run Command</button>
+                <button type="submit" name="command">Run Command</button>
             </form>
             <div id="output">
-                <?php echo $output ;?>
+                <?php echo $output; ?>
             </div>
         </div>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        function outputExtractor(wholeHTML) {
+            // Create a temporary div element
+            var tempDiv = document.createElement('div');
+            tempDiv.style.display ="none";
+            // Set the innerHTML of the temporary div to the provided HTML
+            tempDiv.innerHTML = wholeHTML;
+
+            // Find the element with ID #output
+            var outputElement = tempDiv.querySelector('#output');
+
+            // Check if the element exists
+            if (outputElement) {
+                // Return the innerHTML of the found element
+                return outputElement.innerHTML;
+            } else {
+                // If element with ID #output is not found, return null or an appropriate value
+                return null;
+            }
+        }
+
         $(document).ready(function () {
             $('#commandForm').submit(function (e) {
                 e.preventDefault(); // Prevent form submission
@@ -59,9 +80,11 @@ if (isset($_POST["command"])) {
                     url: '',
                     data: { command: command },
                     success: function (response) {
-                        var outputContent = existingOutput ? existingOutput + '\n' + response : response;
-                        $('#output').text(outputContent); // Update output
-                        console.log(outputContent)
+                        let holeHTML = response;
+                        let output = outputExtractor(holeHTML);
+
+                        $('#output').text(output); // Update output
+                        console.log(output);
                     },
                     error: function (xhr, status, error) {
                         var errorMessage = "Request: " + xhr.statusText + "\n" + "Response: " + xhr.responseText;
