@@ -13,7 +13,7 @@ if (isset($_POST["command"])) {
         // fclose($pythonScript);
 
         // Execute the Python script and capture the output
-        $output = shell_exec($command);
+        //$output = shell_exec($command);
     }
 }
 ?>
