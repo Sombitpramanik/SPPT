@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+</head>
+
+<body>
+    <?php include_once "HTML/component/header.html";?>
+    <main>
+        
+        
+    </main>
+    <?php include_once "HTML/component/footer.html";?>
+</body>
+<script useFor="append the CSS files in the Head tag as the Link && add the favicon">
+    let cssList = ["root", "nav", "banner", "workDemo", "secondBanner", "footer"];
+
+    for (let item of cssList) {
+        let link = document.createElement("link");
+
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = `CSS/${item}.css`;
+        link.setAttribute("preload", "");
+        document.head.appendChild(link);
+    }   
+    let icon = document.createElement("link");
+    icon.rel = "shortcut icon";
+    icon.type = "image/x-icon"
+    icon.href = "Assets/LOGO/logo.png";
+    document.head.appendChild(icon);
+
+</script>
+
+</html>

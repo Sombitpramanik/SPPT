@@ -140,10 +140,10 @@
     <?php include_once "HTML/component/footer.html";?>
 </body>
 <script useFor="append the CSS files in the Head tag as the Link && add the favicon">
-    const cssList = ["root", "nav", "banner", "workDemo", "secondBanner", "footer"];
+    let cssList = ["root", "nav", "banner", "workDemo", "secondBanner", "footer"];
 
-    for (const item of cssList) {
-        const link = document.createElement("link");
+    for (let item of cssList) {
+        let link = document.createElement("link");
 
         link.rel = "stylesheet";
         link.type = "text/css";
@@ -151,7 +151,7 @@
         link.setAttribute("preload", "");
         document.head.appendChild(link);
     }
-    const icon = document.createElement("link");
+    let icon = document.createElement("link");
     icon.rel = "shortcut icon";
     icon.type = "image/x-icon"
     icon.href = "Assets/LOGO/logo.png";
