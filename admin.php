@@ -13,8 +13,6 @@ if (isset($_POST["command"])) {
 
         // Execute the Python script and capture the output
         $output = shell_exec($command);
-
-        echo $output;
     }
 }
 ?>
@@ -44,7 +42,7 @@ if (isset($_POST["command"])) {
                 <button type="submit">Run Command</button>
             </form>
             <div id="output">
-                <!-- Output will be displayed here -->
+                <?php echo $output ;?>
             </div>
         </div>
     </main>
