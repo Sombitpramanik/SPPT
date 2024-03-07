@@ -41,22 +41,26 @@ if(isset($_POST["command"])){
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#commandForm').submit(function (e) {
-                e.preventDefault(); // Prevent form submission
-                var command = $('#command').val(); // Get command value
-                $.ajax({
-                    type: 'POST',
-                    url: '',
-                    data: { command: command },
-                    success: function (response) {
-                        $('#output').html('<pre>' + response + '</pre>'); // Display output
-                    }
-                });
+<script>
+    $(document).ready(function () {
+        $('#commandForm').submit(function (e) {
+            e.preventDefault(); // Prevent form submission
+            var command = $('#command').val(); // Get command value
+            $.ajax({
+                type: 'POST',
+                url: '',
+                data: { command: command },
+                success: function (response) {
+                    $('#output').html('<pre>' + response + '</pre>'); // Display output
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
             });
         });
-    </script>
+    });
+</script>
+
 </body>
 
 </html>
