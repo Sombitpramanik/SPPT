@@ -1,13 +1,23 @@
 <?php
-$command = $_POST['command'];
+global $command;
+global $output;
 
-// Execute the command and capture the output
-$output = shell_exec($command);
+if (isset($_POST["command"])) {
+    if ($command != null) {
+        // Write the command to a Python script
+        // $pythonScript = fopen("executer.py", "w");
+        // fwrite($pythonScript, "import subprocess\n");
+        // fwrite($pythonScript, "output = subprocess.getoutput('$command')\n");
+        // fwrite($pythonScript, "print(output)");
+        // fclose($pythonScript);
 
-// Return the output
-echo $output;
+        // Execute the Python script and capture the output
+        $output = shell_exec($command);
+
+        echo $output;
+    }
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
